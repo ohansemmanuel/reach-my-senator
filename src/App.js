@@ -100,7 +100,7 @@ function App() {
         </Box>
         <Box my={4}>
           <Flex justify="center">
-            <Stack p={2}>
+            <Stack p={2} d={["none", "block"]}>
               {senatorNames.split(",").map((v, i) => (
                 <Badge variant="outline" variantColor="green" key={i}>
                   {v}
