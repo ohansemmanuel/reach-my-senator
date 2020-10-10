@@ -1,32 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Stack, Select, Box, Badge, Flex, Image, Text } from "@chakra-ui/core";
-import { getSenatorInfo, states } from "./utils";
+import { Mailto } from "./Mailto";
 import { EmbeddedTweets } from "./EmbeddedTweets";
 import { generalSenatorEmails } from "./generalSenatorEmails";
+import { Footer } from "./Footer";
 import { message } from "./emailMsg";
-import Footer from "./Footer";
+import { getSenatorInfo, states } from "./utils";
 import "./App.css";
-
-export const Mailto = ({ email, subject, body, children, bcc }) => {
-  return (
-    <a
-      href={`mailto:${email}?subject=${
-        encodeURIComponent(subject) || ""
-      }&body=${encodeURIComponent(body) || ""}&bcc=${bcc}`}
-      style={{
-        display: "block",
-        width: "100%",
-        height: "100%",
-        color: "#fff",
-        textDecoration: "none",
-        fontWeight: "bold",
-        textAlign: "center",
-      }}
-    >
-      {children}
-    </a>
-  );
-};
 
 function App() {
   const [statesValue, setStatesValue] = useState("");
@@ -64,14 +44,12 @@ function App() {
             <Badge variantColor="blue" mx={1}>
               #ENDSARSNOW
             </Badge>
-            <Box d={["none", "block"]}>
-              <Badge variantColor="blue" mx={1}>
-                #EndSARSProtest
-              </Badge>
-              <Badge variantColor="blue" mx={1}>
-                #EndPoliceBrutality
-              </Badge>
-            </Box>
+            <Badge variantColor="blue" mx={1} d={["none", "inline-block"]}>
+              #EndSARSProtest
+            </Badge>
+            <Badge variantColor="blue" mx={1} d={["none", "inline-block"]}>
+              #EndPoliceBrutality
+            </Badge>
           </Flex>
         </Box>
         <Box>
