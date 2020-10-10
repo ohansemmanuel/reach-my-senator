@@ -1,10 +1,10 @@
-import senators from "./senator.js";
+import { senators } from "./senators";
 
 /**
  * Let's you get a comma separated list of senator emails
  * based on a given filter type & value
  *
- * example getSenatorEmails(state, "")
+ * example getSenatorEmails(state, "ABIA")
  */
 export let getSenatorInfo = function (filter_type, filter_value, return_type) {
   let senatorEmailsArray = senators.filter(function (item) {
@@ -19,13 +19,6 @@ export let getSenatorInfo = function (filter_type, filter_value, return_type) {
 
   return returnStrings.slice(0, -1);
 };
-// "state", "ABIA"
-
-export const basicExample = () =>
-  senators.reduce(
-    (acc, v, i, a) => `${acc}${v.email || ""}`,
-    "ohans@gmail.com"
-  );
 
 export const states = [
   "ABIA",

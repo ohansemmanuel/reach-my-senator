@@ -1,4 +1,4 @@
-export default [
+export const senators = [
   {
     state: "ABIA",
     name: "Sen. E. Abaribe",

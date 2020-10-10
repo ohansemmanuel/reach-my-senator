@@ -1,8 +1,8 @@
 import React from "react";
-import { Box, Flex } from "@chakra-ui/core";
 import TweetEmbed from "react-tweet-embed";
-import { defaultTweetIds } from "./defaultTweetIds";
+import { Box, Flex } from "@chakra-ui/core";
 import { shuffle } from "./utils";
+import { defaultTweetIds } from "./defaultTweetIds";
 
 export const EmbeddedTweets = React.memo(() => (
   <Flex direction={["column", "row"]} justify="center" my={10} width={"100%"}>
