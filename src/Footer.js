@@ -2,7 +2,7 @@ import React from "react";
 import { Text, Flex, Link } from "@chakra-ui/core";
 import "./Footer.css";
 
-const developers = ["OhansEmmanuel", "tejuafonja", "OgundipeOre"];
+const developers = ["tejuafonja", "OgundipeOre", "OhansEmmanuel"];
 
 export const Footer = () => {
   return (
