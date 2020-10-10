@@ -43,9 +43,9 @@ export const Footer = () => {
       <Flex justify="center" mt={3}>
         <a
           class="github-button"
-          href="https://github.com/ntkme/github-buttons"
+          href="https://github.com/ohansemmanuel/reach-my-senator"
           data-icon="octicon-star"
-          aria-label="Star ntkme/github-buttons on GitHub"
+          aria-label="Star reach-my-senator on GitHub"
         >
           Github
         </a>
