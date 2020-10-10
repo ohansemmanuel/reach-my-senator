@@ -2,24 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Stack, Box, Select, Badge, Flex, Image, Text } from "@chakra-ui/core";
 import TweetEmbed from "react-tweet-embed";
 import { getSenatorInfo, states, shuffle } from "./utils";
+import { defaultTweetIds } from "./defaultTweetIds";
+import { generalSenatorEmails } from "./generalSenatorEmails";
+import { message } from "./emailMsg";
 import Footer from "./Footer";
 import "./App.css";
-
-const str = `
-Dear Senator, 
-
-I am a concerned citizen of your constituent, and I'll like to express my
-displeasure about SARS. The members of this squad who are supposed to
-protect us against armed robbery are killing, extorting and harassing us
-everyday. We are scared to move freely and we need your help. I urge you,
-distinguished, to use your office to protect the lives of Nigerian youth and
-the future of Nigeria. We are counting on you to do the right thing. We are
-counting on you to help us #ENDSARS #ENDPOLICEBRUTALITY.
-
-Thanks, Senator!
-`;
-
-const defaultEmails = "info@nass.gov.ng, office@ngspeaker.org";
 
 export const Mailto = ({ email, subject, body, children, bcc }) => {
   return (
@@ -28,6 +15,9 @@ export const Mailto = ({ email, subject, body, children, bcc }) => {
         encodeURIComponent(subject) || ""
       }&body=${encodeURIComponent(body) || ""}&bcc=${bcc}`}
       style={{
+        display: "block",
+        width: "100%",
+        height: "100%",
         color: "#fff",
         textDecoration: "none",
         fontWeight: "bold",
@@ -125,7 +115,12 @@ function App() {
           rounded="lg"
           textAlign={["left", "center"]}
         >
-          <Mailto email={defaultEmails} subject="END SARS" body={str} bcc={bcc}>
+          <Mailto
+            email={generalSenatorEmails}
+            subject="END SARS"
+            body={message}
+            bcc={bcc}
+          >
             Send your senators an email
           </Mailto>
         </Box>
@@ -151,29 +146,3 @@ function App() {
 }
 
 export default App;
-
-const defaultTweetIds = [
-  "1314834066471112704",
-  "1314852223667580928",
-  "1314481303388073985",
-  "1314834066471112704",
-  "1314742875628937216",
-  "1314828495290347520",
-  "1314687053918081026",
-  "1314569903156887553",
-  "1314837490113622018",
-  "1314754799057997826",
-  "1314700045300772864",
-  "1314709249692512257",
-  "1314535242582183937",
-  "1314862548131475456",
-  "1314862947861225472",
-  "1314613017494138880",
-  "1314438393825239040",
-  "1314498136300228611",
-  "1314549754823684097",
-  "1314514847673929728",
-  "1314602252963905538",
-  "1314496753027239937",
-  "1314440263054565376",
-];
