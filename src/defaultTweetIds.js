@@ -1,4 +1,4 @@
-export const  = [
+export const defaultTweetIds = [
   "1314834066471112704",
   "1314852223667580928",
   "1314481303388073985",
