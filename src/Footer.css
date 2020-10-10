@@ -1,0 +1,9 @@
+.Footer {
+  padding: 10px;
+}
+
+.external-link {
+  text-decoration: none;
+  color: #4a26ab;
+  font-weight: 700;
+}
