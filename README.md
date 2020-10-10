@@ -2,4 +2,6 @@
 
 # Reach My Senator
 
-> Warning: Incredibly hacky and messy code in here. WIP
+Email all senators in your constituent 🇳🇬
+
+![https://i.imgur.com/Zoz2Upx.png](https://i.imgur.com/Zoz2Upx.png)
