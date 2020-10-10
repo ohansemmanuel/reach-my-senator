@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, Flex, Link } from "@chakra-ui/core";
+import { Box, Text, Flex, Link } from "@chakra-ui/core";
 import "./Footer.css";
 
 const developers = ["tejuafonja", "OgundipeOre", "OhansEmmanuel"];
@@ -23,8 +23,10 @@ export const Footer = () => {
         </span>{" "}
       </Text>
       <Text fontSize="xs" textAlign={"center"}>
+        {" "}
         Made with love from:{" "}
       </Text>
+
       <Flex justify="center">
         {developers.map((dev, i) => (
           <Link
@@ -37,6 +39,16 @@ export const Footer = () => {
             {`@${dev}`}
           </Link>
         ))}
+      </Flex>
+      <Flex justify="center" mt={3}>
+        <a
+          class="github-button"
+          href="https://github.com/ntkme/github-buttons"
+          data-icon="octicon-star"
+          aria-label="Star ntkme/github-buttons on GitHub"
+        >
+          Github
+        </a>
       </Flex>
     </div>
   );
