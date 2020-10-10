@@ -5,7 +5,8 @@ import { EmbeddedTweets } from "./EmbeddedTweets";
 import { generalSenatorEmails } from "./generalSenatorEmails";
 import { Footer } from "./Footer";
 import { message } from "./emailMsg";
-import { getSenatorInfo, states } from "./utils";
+import { getSenatorInfo } from "./getSenatorInfo";
+import { states } from "./statesNG";
 import "./App.css";
 
 function App() {

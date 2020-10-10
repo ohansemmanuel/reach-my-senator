@@ -1,7 +1,7 @@
 import React from "react";
 import TweetEmbed from "react-tweet-embed";
 import { Box, Flex } from "@chakra-ui/core";
-import { shuffle } from "./utils";
+import { shuffle } from "./shuffleArray";
 import { defaultTweetIds } from "./defaultTweetIds";
 
 export const EmbeddedTweets = React.memo(() => (
