@@ -4,7 +4,7 @@ import "./Footer.css";
 
 const developers = ["OhansEmmanuel", "tejuafonja", "OgundipeOre"];
 
-function Footer() {
+export const Footer = () => {
   return (
     <div className="Footer">
       <Text fontSize="sm" textAlign="center">
@@ -40,6 +40,6 @@ function Footer() {
       </Flex>
     </div>
   );
-}
+};
 
 export default Footer;
