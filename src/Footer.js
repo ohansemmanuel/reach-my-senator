@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text, Flex, Link } from "@chakra-ui/core";
+import { Text, Flex, Link } from "@chakra-ui/core";
 import "./Footer.css";
 
 const developers = ["tejuafonja", "OgundipeOre", "OhansEmmanuel"];
