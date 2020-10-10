@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Stack, Box, Select, Badge, Flex, Image, Text } from "@chakra-ui/core";
-import TweetEmbed from "react-tweet-embed";
-import { getSenatorInfo, states, shuffle } from "./utils";
-import { defaultTweetIds } from "./defaultTweetIds";
+import { Stack, Select, Box, Badge, Flex, Image, Text } from "@chakra-ui/core";
+import { getSenatorInfo, states } from "./utils";
+import { EmbeddedTweets } from "./EmbeddedTweets";
 import { generalSenatorEmails } from "./generalSenatorEmails";
 import { message } from "./emailMsg";
 import Footer from "./Footer";
@@ -126,20 +125,7 @@ function App() {
         </Box>
       </div>
       {/* Tweets*/}
-      <Flex
-        direction={["column", "row"]}
-        justify="center"
-        my={10}
-        width={"100%"}
-      >
-        {shuffle(defaultTweetIds)
-          .slice(0, 4)
-          .map((id, i) => (
-            <Box px={3} key={i}>
-              <TweetEmbed id={id} key={id} />
-            </Box>
-          ))}
-      </Flex>
+      <EmbeddedTweets />
       <Footer />
     </div>
   );
